@@ -5,7 +5,10 @@ import (
 	"net/http"
 )
 
+var Shark = "Sammy"
+
 func Hello() {
+
 	// Создаем сервер
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// Отдаем текст "Hello, web!"
@@ -14,4 +17,5 @@ func Hello() {
 
 	// Запускаем сервер
 	http.ListenAndServe(":8080", nil)
+
 }
