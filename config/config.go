@@ -1,14 +1,13 @@
-package main
+package config
 
-// некоторые импорты нужны для проверки
 import (
 	"fmt"
 	"net/http"
 )
 
-func main() {
+func Hello() {
 	// Создаем сервер
-	http.HandleFunc("/get", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// Отдаем текст "Hello, web!"
 		fmt.Fprintf(w, "Hello, web!")
 	})
